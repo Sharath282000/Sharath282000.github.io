@@ -991,8 +991,8 @@ textarea::placeholder {
     textarea::placeholder {
         font-size: 13px;
     }
-    .col-2 iframe {
-        height: 350px;
+    .col-2{
+        min-height: 320px;
     }
 
     .copyrights p {
