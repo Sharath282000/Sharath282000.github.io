@@ -11,7 +11,7 @@ contact.addEventListener('submit',function(e){
 function sendEmail() {
     sendbtn.innerHTML="Sending..."
     Email.send({
-        SecureToken: "a392d1c2-1a05-420a-9599-ab84d92a9b08",
+        SecureToken: "a392d1c2-1a05-420a-9599-ab84d92a9b08",//must be your smtpjs token
         To: 'sharathmurugan28@gmail.com',
         From: document.getElementById('email_id').value,
         Subject: "Contact Form Enquiry",
