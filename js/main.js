@@ -1,4 +1,3 @@
-
 const sendbtn = document.getElementById('send');
 const msg = document.getElementById('notify');
 const contact = document.getElementById('form');
@@ -10,15 +9,12 @@ contact.addEventListener('submit',function(e){
 })
 function sendEmail() {
     sendbtn.innerHTML="Sending..."
-    Email.send({
-        SecureToken: "a392d1c2-1a05-420a-9599-ab84d92a9b08",//must be your smtpjs token
-        To: 'sharathmurugan28@gmail.com',
-        From: document.getElementById('email_id').value,
-        Subject: "Contact Form Enquiry",
-        Body: "Hello Sharath, you got an email from " + document.getElementById('from_name').value
-            + "<br> their Email ID is " + document.getElementById('email_id').value
-            + "<br> regarding - " + document.getElementById('message').value
-    }).then(res => {
+    var params={
+        from_name:document.getElementById('from_name').value,
+        email_id:document.getElementById('email_id').value,
+        message:document.getElementById('message').value
+    };
+    emailjs.send('service_st7yhno','template_ijotbwe',params).then(res => {
         sendbtn.innerHTML="Send"
         msg.innerHTML="Hey buddy❤️ i have received your message lemme contact you soon bye👋"
         setTimeout(function () {
