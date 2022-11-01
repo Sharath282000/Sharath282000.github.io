@@ -23,14 +23,6 @@ function sendEmail() {
     });
 }
 
-const filterBtn = document.querySelectorAll('.filter-btn');
-filterBtn.forEach(btn => btn.addEventListener('click', function () {
-    filterBtn.forEach(button => button.classList.remove('active'));
-    btn.classList.add('active');
-    const filterValue = btn.dataset.filter;
-    $('.grid').isotope({ filter: filterValue });
-}));
-
 const navul = document.getElementById('navbar-links');
 const navli = navul.querySelectorAll('li');
 
