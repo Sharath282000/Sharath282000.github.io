@@ -565,71 +565,61 @@ nav ul li.active a:hover::before {
     background-color: rgba(1, 80, 80, 1);
 }
 
-.row {
+.grid-container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.grid {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px 100px;
-    align-items: center;
-    justify-content: center;
+    gap: 30px;
 }
 
-.grid-item {
-    width: 300px;
-    height: 300px;
-    margin: 15px;
-    display: block;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 15px;
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(1, 80, 80, 1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     position: relative;
 }
 
-.grid-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 350px;
+    object-fit:cover;
 }
 
-.grid-body {
+.card-body {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    right: -100%;
-    backdrop-filter: saturate(120%) blur(2px);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 10px 30px;
-    border-radius: 10px;
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    transition: 2s;
+    margin-bottom: 10px;
 }
 
-.grid-info p {
+.card-body span {
+    font-size: 12px;
+}
+
+.card-info {
+    margin: 5px 0;
+}
+
+.card-info p {
     margin-bottom: 15px;
-    font-size: 14px;
 }
 
-.grid-info {
-    width: 100%;
-    height: 100%;
-}
-
-.grid-body .check {
+.card-info .check {
     font-size: 14px;
     padding: 10px 20px;
     background-color: transparent;
@@ -642,16 +632,13 @@ nav ul li.active a:hover::before {
     font-weight: 700;
     max-width: 180px;
     position: relative;
-    transition: transform .5s;
+    transition: all .5s;
 }
 
-.grid-body .check:hover {
+.card-info .check:hover {
     background-color: rgba(1, 80, 80, 1);
 }
 
-.grid-item:hover .grid-body {
-    right: 0;
-}
 
 .contact {
     width: 100%;
@@ -899,6 +886,9 @@ textarea::placeholder {
         padding: 0;
         justify-content: center;
     }
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
 @media(max-width:600px) {
@@ -1004,6 +994,9 @@ textarea::placeholder {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+    .grid-container{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
