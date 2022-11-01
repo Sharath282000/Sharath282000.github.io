@@ -1001,6 +1001,9 @@ textarea::placeholder {
     .card-info p{
         font-size:14px;
     }
+    .card-info .check{
+        font-size:13px;
+    }
 }
 
 @media(max-width:360px) {
