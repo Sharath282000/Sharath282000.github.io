@@ -998,6 +998,9 @@ textarea::placeholder {
     .grid-container{
         grid-template-columns: repeat(1, 1fr);
     }
+    .card-info p{
+        font-size:14px;
+    }
 }
 
 @media(max-width:360px) {
