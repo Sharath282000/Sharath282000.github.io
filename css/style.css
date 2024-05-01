@@ -142,7 +142,7 @@ nav ul li.active a:hover::before {
 }
 
 .profile img {
-    width: 100%;
+    width: 330px;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -730,10 +730,6 @@ textarea::placeholder {
 
     .about-content {
         gap: 20px;
-    }
-
-    .profile img{
-        width: 330px;
     }
 }
 
